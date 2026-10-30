@@ -6,14 +6,16 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Get Flutter dependencies
+      - name: Find and Build Flutter APK
         script: |
+          # اگر پروجیکٹ ذیلی فولڈر میں ہے تو خود بخود اس میں جا کر بلڈ کرے
+          if [ -d "kharcha_dost_app" ]; then
+            cd kharcha_dost_app
+          fi
           flutter packages pub get
-      - name: Build APK with Flutter
-        script: |
           flutter build apk --release
     artifacts:
-      - build/**/outputs/**/*.apk
+      - "**/build/**/outputs/**/*.apk"
     publishing:
       email:
         recipients:
