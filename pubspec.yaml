@@ -1,0 +1,31 @@
+name: kharcha_dost
+description: A smart daily expense manager and budget tracker for salaried individuals with SMS auto-detection, Excel export, and invoice generator.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.19.0
+  sqflite: ^2.3.0
+  path: ^1.9.0
+  telephony: ^0.2.0
+  excel: ^4.0.3
+  pdf: ^3.10.8
+  printing: ^5.13.1
+  share_plus: ^9.0.0
+  path_provider: ^2.1.3
+  permission_handler: ^11.3.1
+  fl_chart: ^0.68.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
